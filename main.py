@@ -34,6 +34,9 @@ searchButton.grid(row=0,column=6,padx=20,pady=8)
 productsFrame=Frame(root)
 productsFrame.pack(pady=10,fill=X)
 
+FruitsFrame=LabelFrame(productsFrame,text='Fruits',font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
+FruitsFrame.grid(row=0,column=0)
+
 
 
 
