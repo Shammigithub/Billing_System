@@ -153,6 +153,14 @@ def search():
     else:
         messagebox.showerror('Error','Invalid Billnumber')
 
+def print():
+    if textarea.get(1.0,END)== '\n':
+        messagebox.showerror('Error','Bill is empty')
+    else:
+        file=tempfile.mktemp('.txt')
+        open(file,'w').write(textarea.get(1.0,END))
+        os.startfile(file,'print')
+
 
 #GUI part
 root = Tk()
