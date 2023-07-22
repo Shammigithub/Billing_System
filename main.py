@@ -197,5 +197,23 @@ caketaxLabel.grid(row=2,column=2,pady=9,padx=10,sticky='w')
 caketaxEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 caketaxEntry.grid(row=2,column=3,pady=9,padx=10)
 
+buttonFrame =Frame(billmenuFrame,bd=8,relief=GROOVE)
+buttonFrame.grid(row=0,column=4,rowspan=3,padx=15)
+
+totalButton=Button(buttonFrame,text='Total',font=('arial',16,'bold'),fg='white',bg='maroon4',bd=5,width=7,pady=10,command=total)
+totalButton.grid(row=0,column=0,pady=20,padx=5)
+
+billButton=Button(buttonFrame,text='Bill',font=('arial',16,'bold'),fg='white',bg='maroon4',bd=5,width=7,pady=10,command=bill)
+billButton.grid(row=0,column=1,pady=20,padx=5)
+
+emailButton=Button(buttonFrame,text='Email',font=('arial',16,'bold'),fg='white',bg='maroon4',bd=5,width=7,pady=10,command=email)
+emailButton.grid(row=0,column=2,pady=20,padx=5)
+
+printButton=Button(buttonFrame,text='Print',font=('arial',16,'bold'),fg='white',bg='maroon4',bd=5,width=7,pady=10,command=print)
+printButton.grid(row=0,column=3,pady=20,padx=5)
+
+clearButton=Button(buttonFrame,text='Clear',font=('arial',16,'bold'),fg='white',bg='maroon4',bd=5,width=7,pady=10,command=clear)
+clearButton.grid(row=0,column=4,pady=20,padx=5)
+
 
 root.mainloop()
