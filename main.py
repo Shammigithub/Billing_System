@@ -28,6 +28,9 @@ billLabel.grid(row=0,column=4,padx=20,pady=2)
 billEntry=Entry(customer_details_frame,font=('arial',15),bd=7,widt=15)
 billEntry.grid(row=0,column=5,padx=8)
 
+searchButton=Button(customer_details_frame,text='SEARCH',font=('arial',12,'bold'),bd=7,width=10,command=search)
+searchButton.grid(row=0,column=6,padx=20,pady=8)
+
 
 
 
