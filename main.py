@@ -23,6 +23,11 @@ phoneLabel.grid(row=0,column=2,padx=20,pady=2)
 phoneEntry=Entry(customer_details_frame,font=('arial',15),bd=7,widt=15)
 phoneEntry.grid(row=0,column=3,padx=8)
 
+billLabel=Label(customer_details_frame,text='Bill Number',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+billLabel.grid(row=0,column=4,padx=20,pady=2)
+billEntry=Entry(customer_details_frame,font=('arial',15),bd=7,widt=15)
+billEntry.grid(row=0,column=5,padx=8)
+
 
 
 
