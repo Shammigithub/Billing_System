@@ -82,5 +82,11 @@ dodolEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 dodolEntry.grid(row=0,column=1,pady=9,padx=10)
 dodolEntry.insert(0,0)
 
+thalaLabel=Label(SweetsFrame,text='Thalakerali',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+thalaLabel.grid(row=1,column=0,pady=9,padx=10,sticky='w')
+thalaEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+thalaEntry.grid(row=1,column=1,pady=9,padx=10)
+thalaEntry.insert(0,0)
+
 
 root.mainloop()
