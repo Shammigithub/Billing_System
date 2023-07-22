@@ -37,6 +37,12 @@ productsFrame.pack(pady=10,fill=X)
 FruitsFrame=LabelFrame(productsFrame,text='Fruits',font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
 FruitsFrame.grid(row=0,column=0)
 
+papawLabel=Label(FruitsFrame,text='Papaw',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+papawLabel.grid(row=0,column=0,pady=9,padx=10)
+papawEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+papawEntry.grid(row=0,column=1,pady=9,padx=10)
+papawEntry.insert(0,0)
+
 
 
 
