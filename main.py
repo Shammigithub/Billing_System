@@ -115,5 +115,41 @@ swEntry.insert(0,0)
 cakeFrame=LabelFrame(productsFrame,text="Cakes",font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
 cakeFrame.grid(row=0,column=2)
 
+vcakeLabel=Label(cakeFrame,text='Vanilla Cake',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+vcakeLabel.grid(row=0,column=0,pady=9,padx=10,sticky='w')
+vcakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+vcakeEntry.grid(row=0,column=1,pady=9,padx=10)
+vcakeEntry.insert(0,0)
+
+ccakeLabel=Label(cakeFrame,text='Chocolate Cake',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+ccakeLabel.grid(row=1,column=0,pady=9,padx=10,sticky='w')
+ccakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+ccakeEntry.grid(row=1,column=1,pady=9,padx=10)
+ccakeEntry.insert(0,0)
+
+fcakeLabel=Label(cakeFrame,text='Fruit Cake',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+fcakeLabel.grid(row=2,column=0,pady=9,padx=10,sticky='w')
+fcakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+fcakeEntry.grid(row=2,column=1,pady=9,padx=10)
+fcakeEntry.insert(0,0)
+
+lcakeLabel=Label(cakeFrame,text='Layer Cake ',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+lcakeLabel.grid(row=3,column=0,pady=9,padx=10,sticky='w')
+lcakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+lcakeEntry.grid(row=3,column=1,pady=9,padx=10)
+lcakeEntry.insert(0,0)
+
+icakeLabel=Label(cakeFrame,text='Icing Cake',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+icakeLabel.grid(row=4,column=0,pady=9,padx=10,sticky='w')
+icakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+icakeEntry.grid(row=4,column=1,pady=9,padx=10)
+icakeEntry.insert(0,0)
+
+cfcakeLabel=Label(cakeFrame,text='Coffee Cake',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+cfcakeLabel.grid(row=5,column=0,pady=9,padx=10,sticky='w')
+cfcakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+cfcakeEntry.grid(row=5,column=1,pady=9,padx=10)
+cfcakeEntry.insert(0,0)
+
 
 root.mainloop()
