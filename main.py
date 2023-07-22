@@ -61,6 +61,12 @@ orangeEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 orangeEntry.grid(row=3,column=1,pady=9,padx=10)
 orangeEntry.insert(0,0)
 
+avacadoLabel=Label(FruitsFrame,text='Avacado',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+avacadoLabel.grid(row=4,column=0,pady=9,padx=10)
+avacadoEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+avacadoEntry.grid(row=4,column=1,pady=9,padx=10)
+avacadoEntry.insert(0,0)
+
 
 
 
