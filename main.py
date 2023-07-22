@@ -141,6 +141,18 @@ def save_bill():
         messagebox.showinfo('Success',f'billnumber{billnumber}is saved successfuly')
         billnumber=random.randint(500,1000)
 
+def search():
+    for i in os.listdir('bills/'):
+        if i.split('.')[0]== billEntry.get():
+            f=open(f'bills/{i}','r')
+            textarea.delete(1.0,END)
+            for data in f:
+                textarea.insert(END,data)
+            f.close()
+            break
+    else:
+        messagebox.showerror('Error','Invalid Billnumber')
+
 
 #GUI part
 root = Tk()
