@@ -88,5 +88,11 @@ thalaEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 thalaEntry.grid(row=1,column=1,pady=9,padx=10)
 thalaEntry.insert(0,0)
 
+phuLabel=Label(SweetsFrame,text='Puhul Dosi',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+phuLabel.grid(row=2,column=0,pady=9,padx=10,sticky='w')
+phuEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+phuEntry.grid(row=2,column=1,pady=9,padx=10)
+phuEntry.insert(0,0)
+
 
 root.mainloop()
