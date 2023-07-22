@@ -161,6 +161,69 @@ def print():
         open(file,'w').write(textarea.get(1.0,END))
         os.startfile(file,'print')
 
+def email():
+    def send():
+        try:
+            ob = smtplib.SMTP('smtp.gmail.com', 587)
+            ob.starttls()
+            ob.login(senderEntry.get(), passwordEntry.get())
+            message = email_textarea.get(1.0, END)
+            ob.sendmail(senderEntry.get(), recipientEntry.get(), message)
+            ob.quit()
+            messagebox.showinfo('Success', 'Bill is successfully sent',parent=root1)
+            root1.destroy()
+        except:
+            messagebox.showerror('Error','Somthing went wrong, Please try again!',parent=root1)
+
+
+
+    if textarea.get(1.0,END)=='\n':
+        messagebox.showerror('Error','Bill is empty')
+    else:
+        root1=Toplevel()
+        root1.grab_set()
+        root1.title('send email')
+        root1.resizable(0,0)
+        root1.config(bg='gray24')
+
+        senderFrame=LabelFrame(root1,text='SENDER',font=('arial',16,'bold'),bd=6,bg='gray24',fg='white')
+        senderFrame.grid(row=0,column=0,padx=40,pady=20)
+
+        senderLabel=Label(senderFrame,text="Sender's Email",font=('arial',14,'bold'),bg='gray24',fg='white')
+        senderLabel.grid(row=0,column=0,padx=10,pady=8)
+
+        senderEntry=Entry(senderFrame,font=('arial',14,'bold'),bd=2,width=23,relief=RIDGE)
+        senderEntry.grid(row=0,column=1,padx=10,pady=8)
+
+        passwordLabel = Label(senderFrame, text="Password", font=('arial', 14, 'bold'), bg='gray24', fg='white')
+        passwordLabel.grid(row=1, column=0, padx=10, pady=8)
+
+        passwordEntry = Entry(senderFrame, font=('arial', 14, 'bold'), bd=2, width=23, relief=RIDGE,show='*')
+        passwordEntry.grid(row=1, column=1, padx=10, pady=8)
+
+        RecipientFrame = LabelFrame(root1, text='RECIPIENT', font=('arial', 16, 'bold'), bd=6, bg='gray24', fg='white')
+        RecipientFrame.grid(row=1, column=0, padx=40, pady=20)
+
+        recipientLabel = Label(RecipientFrame, text="Email Address", font=('arial', 14, 'bold'), bg='gray24', fg='white')
+        recipientLabel.grid(row=0, column=0, padx=10, pady=8)
+
+        recipientEntry = Entry(RecipientFrame, font=('arial', 14, 'bold'), bd=2, width=23, relief=RIDGE)
+        recipientEntry.grid(row=0, column=1, padx=10, pady=8)
+
+        messageLabel = Label(RecipientFrame, text="Message", font=('arial', 14, 'bold'), bg='gray24',
+                               fg='white')
+        messageLabel.grid(row=0, column=0, padx=10, pady=8)
+
+        email_textarea=Text(RecipientFrame,font=('arial', 14, 'bold'),bd=2,relief=SUNKEN,width=42,height=11)
+        email_textarea.grid(row=2,column=0,columnspan=2)
+        email_textarea.delete(1.0,END)
+        email_textarea.insert(END,textarea.get(1.0,END).replace('=','').replace('-','').replace('\t\t\t','\t\t'))
+
+        sendButton=Button(root1,text='SEND',font=('arial',16,'bold'),width=15,command=send)
+        sendButton.grid(row=2,column=0,pady=20)
+
+        root1.mainloop()
+
 
 #GUI part
 root = Tk()
