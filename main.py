@@ -43,6 +43,12 @@ papawEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 papawEntry.grid(row=0,column=1,pady=9,padx=10)
 papawEntry.insert(0,0)
 
+bananaLabel=Label(FruitsFrame,text='Banana',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+bananaLabel.grid(row=1,column=0,pady=9,padx=10)
+bananaEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+bananaEntry.grid(row=1,column=1,pady=9,padx=10)
+bananaEntry.insert(0,0)
+
 
 
 
