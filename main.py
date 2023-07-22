@@ -164,5 +164,13 @@ textarea=Text(billFrame,height=18,width=40,yscrollcommand=scrollbar.set)
 textarea.pack()
 scrollbar.config(command=textarea.yview)
 
+billmenuFrame=LabelFrame(root,text='Bill Menu',font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
+billmenuFrame.pack(fill=X)
+
+fruitLabel=Label(billmenuFrame,text='Fruit Total',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+fruitLabel.grid(row=0,column=0,pady=9,padx=10,sticky='w')
+fruitEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+fruitEntry.grid(row=0,column=1,pady=9,padx=10)
+
 
 root.mainloop()
