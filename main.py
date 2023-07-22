@@ -73,7 +73,8 @@ grapesEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 grapesEntry.grid(row=5,column=1,pady=9,padx=10)
 grapesEntry.insert(0,0)
 
-
+SweetsFrame=LabelFrame(productsFrame,text="Sweets",font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
+SweetsFrame.grid(row=0,column=1)
 
 
 root.mainloop()
