@@ -8,7 +8,7 @@ if not os.path.exists('bills'):
 billnumber=random.randint(500,1000)
 
 def total():
-    global bprice,bprice, aprice,oprice,avprice,bahprice
+    global pprice,bprice, aprice,oprice,avprice,gprice
     global dprice,tprice,puprice,mprice,muprice,sprice
     global vcprice,ccprice,fcprice,lcprice,icprice,cfcprice
     global totalbill
@@ -58,6 +58,76 @@ def total():
     caketaxEntry.insert(0, caketax)
 
     totalbill=totalfruitprice+totalsweetsprice+totalcakeprice+fruittax+sweetstax+caketax
+
+def bill():
+
+    if nameEntry.get()=='' or phoneEntry.get()=='':
+        messagebox.showerror('Error','Customer Details Are Required')
+    elif fruitEntry.get()=='' and sweetsEntry.get()=='' and cakeEntry.get()=='':
+        messagebox.showerror('Error', ' No Products are selected')
+    elif fruitEntry.get()=='Rs.0.0' and sweetsEntry.get()=='Rs.0.0' and cakeEntry.get()=='Rs.0.0':
+        messagebox.showerror('Error', ' No Products are selected')
+    else:
+        textarea.delete(1.0,END)
+        textarea.insert(END,'\t\t**welcome**\n ')
+        textarea.insert(END,f'\nBilll Number:{billnumber}\n')
+        textarea.insert(END, f'\nCustomer Name:{nameEntry.get()}\n')
+        textarea.insert(END, f'\nCustomer phone Number:{phoneEntry.get()}\n')
+        textarea.insert(END, '\n========================================')
+        textarea.insert(END, '\nProduct\t\tQuantity\t\tPrice')
+        textarea.insert(END, '\n========================================')
+        if papawEntry.get()!='0':
+            textarea.insert(END,f'\nPen\t\t{papawEntry.get()}\t\tRs. {pprice}')
+        if bananaEntry.get()!='0':
+            textarea.insert(END,f'\nPencil\t\t{bananaEntry.get()}\t\tRs. {bprice}')
+        if appleEntry.get()!='0':
+            textarea.insert(END,f'\nEraser\t\t{appleEntry.get()}\t\tRs. {aprice}')
+        if orangeEntry.get()!='0':
+            textarea.insert(END,f'\nRuler\t\t{orangeEntry.get()}\t\tRs. {oprice}')
+        if avacadoEntry.get()!='0':
+            textarea.insert(END,f'\nSisor\t\t{avacadoEntry.get()}\t\tRs. {avprice}')
+        if grapesEntry.get()!='0':
+            textarea.insert(END,f'\nCuter\t\t{grapesEntry.get()}\t\tRs. {gprice}')
+
+        if dodolEntry.get() != '0':
+            textarea.insert(END, f'\nbook40\t\t{dodolEntry.get()}\t\tRs. {dprice}')
+        if thalaEntry.get() != '0':
+            textarea.insert(END, f'\nbook80\t\t{thalaEntry.get()}\t\tRs. {tprice}')
+        if phuEntry.get() != '0':
+            textarea.insert(END, f'\nbook120\t\t{phuEntry.get()}\t\tRs. {puprice}')
+        if masEntry.get() != '0':
+            textarea.insert(END, f'\nbook160\t\t{masEntry.get()}\t\tRs. {mprice}')
+        if musEntry.get() != '0':
+            textarea.insert(END, f'\nbook200\t\t{musEntry.get()}\t\tRs. {muprice}')
+        if swEntry.get() != '0':
+            textarea.insert(END, f'\nbook360\t\t{swEntry.get()}\t\tRs. {sprice}')
+
+        if vcakeEntry.get() != '0':
+            textarea.insert(END, f'\nPaper1\t\t{vcakeEntry.get()}\t\tRs. {vcprice}')
+        if ccakeEntry.get() != '0':
+            textarea.insert(END, f'\nPaper2\t\t{ccakeEntry.get()}\t\tRs. {ccprice}')
+        if fcakeEntry.get() != '0':
+            textarea.insert(END, f'\nPaper3\t\t{fcakeEntry.get()}\t\tRs. {fcprice}')
+        if lcakeEntry.get() != '0':
+            textarea.insert(END, f'\nPaper4\t\t{lcakeEntry.get()}\t\tRs. {lcprice}')
+        if icakeEntry.get() != '0':
+            textarea.insert(END, f'\nPaper5\t\t{icakeEntry.get()}\t\tRs. {icprice}')
+        if cfcakeEntry.get() != '0':
+            textarea.insert(END, f'\nPaper6\t\t{cfcakeEntry.get()}\t\tRs. {cfcprice}')
+
+        textarea.insert(END, '\n----------------------------------------')
+
+        if fruittaxEntry.get()!='Rs.0.0':
+            textarea.insert(END,f'\n Cosmetic Tax\t\t\t\tRs.{fruittaxEntry.get()}')
+        if sweetstaxEntry.get()!='Rs.0.0':
+            textarea.insert(END,f'\n Book Tax\t\t\t\tRs.{sweetstaxEntry.get()}')
+        if caketaxEntry.get()!='Rs.0.0':
+            textarea.insert(END,f'\n Paper Tax\t\t\t\tRs.{caketaxEntry.get()}')
+
+        textarea.insert(END,f'\n\nTotal Bill\t\t\t\tRs.{totalbill}')
+        textarea.insert(END, '\n----------------------------------------')
+        textarea.insert(END, '\t\tThank You Come Again\n ')
+        save_bill()
 
 
 #GUI part
