@@ -18,6 +18,11 @@ nameLabel.grid(row=0,column=0,padx=20)
 nameEntry=Entry(customer_details_frame,font=('arial',15),bd=7,width=15)
 nameEntry.grid(row=0,column=1,padx=8)
 
+phoneLabel=Label(customer_details_frame,text='Phone Number',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+phoneLabel.grid(row=0,column=2,padx=20,pady=2)
+phoneEntry=Entry(customer_details_frame,font=('arial',15),bd=7,widt=15)
+phoneEntry.grid(row=0,column=3,padx=8)
+
 
 
 
