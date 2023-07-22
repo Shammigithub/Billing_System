@@ -1,0 +1,25 @@
+		**welcome**
+ 
+Billl Number:915
+
+Customer Name:Kavinda
+
+Customer phone Number:0704120004
+
+========================================
+Product		Quantity		Price
+========================================
+Pencil		05		Rs. 15.0
+Eraser		02		Rs. 10
+book40		03		Rs. 60
+book80		04		Rs. 12.0
+book160		03		Rs. 18
+Paper2		02		Rs. 6.0
+----------------------------------------
+ Cosmetic Tax				Rs.3.0
+ Book Tax				Rs.10.799999999999999
+ Paper Tax				Rs.0.72
+
+Total Bill				Rs.135.52
+----------------------------------------		Thank You Come Again
+ 

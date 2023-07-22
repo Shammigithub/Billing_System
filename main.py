@@ -224,6 +224,63 @@ def email():
 
         root1.mainloop()
 
+def clear():
+    papawEntry.delete(0, END)
+    bananaEntry.delete(0, END)
+    appleEntry.delete(0,END)
+    orangeEntry.delete(0, END)
+    avacadoEntry.delete(0, END)
+    grapesEntry.delete(0, END)
+
+    dodolEntry.delete(0, END)
+    thalaEntry.delete(0, END)
+    phuEntry.delete(0, END)
+    masEntry.delete(0, END)
+    musEntry.delete(0, END)
+    swEntry.delete(0, END)
+
+    vcakeEntry.delete(0, END)
+    ccakeEntry.delete(0, END)
+    fcakeEntry.delete(0, END)
+    lcakeEntry.delete(0, END)
+    icakeEntry.delete(0, END)
+    cfcakeEntry.delete(0, END)
+
+    papawEntry.insert(0,0)
+    bananaEntry.insert(0,0)
+    appleEntry.insert(0, 0)
+    orangeEntry.insert(0, 0)
+    avacadoEntry.insert(0, 0)
+    grapesEntry.insert(0, 0)
+
+    dodolEntry.insert(0, 0)
+    thalaEntry.insert(0, 0)
+    phuEntry.insert(0, 0)
+    masEntry.insert(0, 0)
+    musEntry.insert(0, 0)
+    swEntry.insert(0, 0)
+
+    vcakeEntry.insert(0, 0)
+    ccakeEntry.insert(0, 0)
+    fcakeEntry.insert(0, 0)
+    lcakeEntry.insert(0, 0)
+    icakeEntry.insert(0, 0)
+    cfcakeEntry.insert(0, 0)
+
+    fruitEntry.delete(0,END)
+    sweetsEntry.delete(0,END)
+    cakeEntry.delete(0,END)
+
+    fruittaxEntry.delete(0,END)
+    sweetstaxEntry.delete(0,END)
+    caketaxEntry.delete(0,END)
+
+    nameEntry.delete(0,END)
+    phoneEntry.delete(0,END)
+    billEntry.delete(0,END)
+
+    textarea.delete(1.0,END)
+
 
 #GUI part
 root = Tk()
