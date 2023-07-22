@@ -94,5 +94,11 @@ phuEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 phuEntry.grid(row=2,column=1,pady=9,padx=10)
 phuEntry.insert(0,0)
 
+masLabel=Label(SweetsFrame,text='Marshmallows',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+masLabel.grid(row=3,column=0,pady=9,padx=10,sticky='w')
+masEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+masEntry.grid(row=3,column=1,pady=9,padx=10)
+masEntry.insert(0,0)
+
 
 root.mainloop()
