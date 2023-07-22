@@ -49,6 +49,12 @@ bananaEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 bananaEntry.grid(row=1,column=1,pady=9,padx=10)
 bananaEntry.insert(0,0)
 
+appleLabel=Label(FruitsFrame,text='Apple',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+appleLabel.grid(row=2,column=0,pady=9,padx=10)
+appleEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+appleEntry.grid(row=2,column=1,pady=9,padx=10)
+appleEntry.insert(0,0)
+
 
 
 
