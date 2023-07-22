@@ -151,5 +151,18 @@ cfcakeEntry=Entry(cakeFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 cfcakeEntry.grid(row=5,column=1,pady=9,padx=10)
 cfcakeEntry.insert(0,0)
 
+billFrame=Frame(productsFrame,bd=8,relief=GROOVE)
+billFrame.grid(row=0,column=3,padx=55)
+
+billareaLabel=Label(billFrame,text='Bill Area',font=('times new roman',15,'bold'),bd=7,relief=GROOVE)
+billareaLabel.pack(fill=X,padx=40)
+
+scrollbar=Scrollbar(billFrame,orient=VERTICAL)
+scrollbar.pack(side=RIGHT,fill=Y)
+
+textarea=Text(billFrame,height=18,width=40,yscrollcommand=scrollbar.set)
+textarea.pack()
+scrollbar.config(command=textarea.yview)
+
 
 root.mainloop()
