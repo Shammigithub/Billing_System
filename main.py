@@ -73,9 +73,9 @@ def bill():
         textarea.insert(END,f'\nBilll Number:{billnumber}\n')
         textarea.insert(END, f'\nCustomer Name:{nameEntry.get()}\n')
         textarea.insert(END, f'\nCustomer phone Number:{phoneEntry.get()}\n')
-        textarea.insert(END, '\n========================================')
+        textarea.insert(END, '\n======================================')
         textarea.insert(END, '\nProduct\t\tQuantity\t\tPrice')
-        textarea.insert(END, '\n========================================')
+        textarea.insert(END, '\n======================================')
         if papawEntry.get()!='0':
             textarea.insert(END,f'\nPen\t\t{papawEntry.get()}\t\tRs. {pprice}')
         if bananaEntry.get()!='0':
@@ -115,7 +115,7 @@ def bill():
         if cfcakeEntry.get() != '0':
             textarea.insert(END, f'\nPaper6\t\t{cfcakeEntry.get()}\t\tRs. {cfcprice}')
 
-        textarea.insert(END, '\n----------------------------------------')
+        textarea.insert(END, '\n--------------------------------------')
 
         if fruittaxEntry.get()!='Rs.0.0':
             textarea.insert(END,f'\n Cosmetic Tax\t\t\t\tRs.{fruittaxEntry.get()}')
@@ -124,9 +124,9 @@ def bill():
         if caketaxEntry.get()!='Rs.0.0':
             textarea.insert(END,f'\n Paper Tax\t\t\t\tRs.{caketaxEntry.get()}')
 
-        textarea.insert(END,f'\n\nTotal Bill\t\t\t\tRs.{totalbill}')
-        textarea.insert(END, '\n----------------------------------------')
-        textarea.insert(END, '\t\tThank You Come Again\n ')
+        textarea.insert(END,f'\n\nTotal Bill\t\t\t\tRs.{totalbill}\n')
+        textarea.insert(END, '\n--------------------------------------')
+        textarea.insert(END, '\t\t\tThank You Come Again\n ')
         save_bill()
 
 def save_bill():
@@ -433,15 +433,15 @@ cfcakeEntry.grid(row=5,column=1,pady=9,padx=10)
 cfcakeEntry.insert(0,0)
 
 billFrame=Frame(productsFrame,bd=8,relief=GROOVE)
-billFrame.grid(row=0,column=3,padx=55)
+billFrame.grid(row=0,column=3,)
 
 billareaLabel=Label(billFrame,text='Bill Area',font=('times new roman',15,'bold'),bd=7,relief=GROOVE)
-billareaLabel.pack(fill=X,padx=40)
+billareaLabel.pack(fill=X,)
 
 scrollbar=Scrollbar(billFrame,orient=VERTICAL)
 scrollbar.pack(side=RIGHT,fill=Y)
 
-textarea=Text(billFrame,height=18,width=40,yscrollcommand=scrollbar.set)
+textarea=Text(billFrame,height=18,width=38,yscrollcommand=scrollbar.set)
 textarea.pack()
 scrollbar.config(command=textarea.yview)
 

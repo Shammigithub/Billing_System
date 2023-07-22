@@ -1,0 +1,23 @@
+		**welcome**
+ 
+Billl Number:810
+
+Customer Name:Nuwan
+
+Customer phone Number:0765707996
+
+======================================
+Product		Quantity		Price
+======================================
+Eraser		04		Rs. 20
+book160		04		Rs. 24
+Paper2		05		Rs. 15.0
+--------------------------------------
+ Cosmetic Tax				Rs.2.4
+ Book Tax				Rs.2.88
+ Paper Tax				Rs.1.7999999999999998
+
+Total Bill				Rs.66.08
+
+--------------------------------------		Thank You Come Again
+ 
