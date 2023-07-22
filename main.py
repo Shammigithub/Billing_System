@@ -106,5 +106,11 @@ musEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 musEntry.grid(row=4,column=1,pady=9,padx=10)
 musEntry.insert(0,0)
 
+swLabel=Label(SweetsFrame,text='Sweet Cashew',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+swLabel.grid(row=5,column=0,pady=9,padx=10,sticky='w')
+swEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+swEntry.grid(row=5,column=1,pady=9,padx=10)
+swEntry.insert(0,0)
+
 
 root.mainloop()
