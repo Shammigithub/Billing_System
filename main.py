@@ -167,10 +167,35 @@ scrollbar.config(command=textarea.yview)
 billmenuFrame=LabelFrame(root,text='Bill Menu',font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
 billmenuFrame.pack(fill=X)
 
-fruitLabel=Label(billmenuFrame,text='Fruit Total',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+fruitLabel=Label(billmenuFrame,text='Fruits Total',font=('times new roman',15,'bold'),bg='gray24',fg='white')
 fruitLabel.grid(row=0,column=0,pady=9,padx=10,sticky='w')
 fruitEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 fruitEntry.grid(row=0,column=1,pady=9,padx=10)
+
+sweetsLabel=Label(billmenuFrame,text='Sweets Total',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+sweetsLabel.grid(row=1,column=0,pady=9,padx=10,sticky='w')
+sweetsEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+sweetsEntry.grid(row=1,column=1,pady=9,padx=10)
+
+cakeLabel=Label(billmenuFrame,text='Cakes Total',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+cakeLabel.grid(row=2,column=0,pady=9,padx=10,sticky='w')
+cakeEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+cakeEntry.grid(row=2,column=1,pady=9,padx=10)
+
+fruittaxLabel=Label(billmenuFrame,text='Fruit Tax',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+fruittaxLabel.grid(row=0,column=2,pady=9,padx=10,sticky='w')
+fruittaxEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+fruittaxEntry.grid(row=0,column=3,pady=9,padx=10)
+
+sweetstaxLabel=Label(billmenuFrame,text='Sweets Tax',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+sweetstaxLabel.grid(row=1,column=2,pady=9,padx=10,sticky='w')
+sweetstaxEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+sweetstaxEntry.grid(row=1,column=3,pady=9,padx=10)
+
+caketaxLabel=Label(billmenuFrame,text='Cake Tax',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+caketaxLabel.grid(row=2,column=2,pady=9,padx=10,sticky='w')
+caketaxEntry=Entry(billmenuFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+caketaxEntry.grid(row=2,column=3,pady=9,padx=10)
 
 
 root.mainloop()
