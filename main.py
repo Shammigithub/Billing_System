@@ -112,5 +112,8 @@ swEntry=Entry(SweetsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 swEntry.grid(row=5,column=1,pady=9,padx=10)
 swEntry.insert(0,0)
 
+cakeFrame=LabelFrame(productsFrame,text="Cakes",font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
+cakeFrame.grid(row=0,column=2)
+
 
 root.mainloop()
