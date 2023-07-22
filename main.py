@@ -7,6 +7,59 @@ if not os.path.exists('bills'):
 
 billnumber=random.randint(500,1000)
 
+def total():
+    global bprice,bprice, aprice,oprice,avprice,bahprice
+    global dprice,tprice,puprice,mprice,muprice,sprice
+    global vcprice,ccprice,fcprice,lcprice,icprice,cfcprice
+    global totalbill
+
+    pprice=int(papawEntry.get())*20
+    bprice=int(bananaEntry.get())* 3.00
+    aprice=int(appleEntry.get())*5
+    oprice=int(orangeEntry.get())*6
+    avprice=int(avacadoEntry.get())*90
+    gprice=int(grapesEntry.get())*78
+
+    totalfruitprice=pprice+bprice+aprice+oprice+avprice+gprice
+    fruitEntry.delete(0,END)
+    fruitEntry.insert(0,'Rs.'+str(totalfruitprice))
+    fruittax=totalfruitprice*0.12
+    fruittaxEntry.delete(0, END)
+    fruittaxEntry.insert(0,fruittax)
+
+
+    dprice = int(dodolEntry.get()) * 20
+    tprice = int(thalaEntry.get()) * 3.00
+    puprice = int(phuEntry.get()) * 5
+    mprice = int(masEntry.get()) * 6
+    muprice = int(musEntry.get()) * 90
+    sprice = int(swEntry.get()) * 78
+
+    totalsweetsprice = dprice + tprice + puprice + mprice + muprice + sprice
+    sweetsEntry.delete(0, END)
+    sweetsEntry.insert(0, 'Rs.' + str(totalsweetsprice))
+    sweetstax = totalsweetsprice * 0.12
+    sweetstaxEntry.delete(0, END)
+    sweetstaxEntry.insert(0, sweetstax)
+
+
+    vcprice = int(vcakeEntry.get()) * 20
+    ccprice = int(ccakeEntry.get()) * 3.00
+    fcprice = int(fcakeEntry.get()) * 5
+    lcprice = int(lcakeEntry.get()) * 6
+    icprice = int(icakeEntry.get()) * 90
+    cfcprice = int(cfcakeEntry.get()) * 78
+
+    totalcakeprice = vcprice + ccprice + fcprice +lcprice + icprice + cfcprice
+    cakeEntry.delete(0, END)
+    cakeEntry.insert(0, 'Rs.' + str(totalcakeprice))
+    caketax = totalcakeprice * 0.12
+    caketaxEntry.delete(0, END)
+    caketaxEntry.insert(0, caketax)
+
+    totalbill=totalfruitprice+totalsweetsprice+totalcakeprice+fruittax+sweetstax+caketax
+
+
 #GUI part
 root = Tk()
 root.title("Billing System")
