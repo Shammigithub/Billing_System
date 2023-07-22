@@ -67,6 +67,12 @@ avacadoEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 avacadoEntry.grid(row=4,column=1,pady=9,padx=10)
 avacadoEntry.insert(0,0)
 
+grapesLabel=Label(FruitsFrame,text='Grapes',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+grapesLabel.grid(row=5,column=0,pady=9,padx=10)
+grapesEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+grapesEntry.grid(row=5,column=1,pady=9,padx=10)
+grapesEntry.insert(0,0)
+
 
 
 
