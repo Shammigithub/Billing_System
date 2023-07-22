@@ -2,6 +2,11 @@ from tkinter import *
 from tkinter import messagebox
 import random,os,tempfile,smtplib
 
+if not os.path.exists('bills'):
+    os.mkdir('bills')
+
+billnumber=random.randint(500,1000)
+
 #GUI part
 root = Tk()
 root.title("Billing System")
