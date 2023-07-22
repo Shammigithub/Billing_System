@@ -55,6 +55,12 @@ appleEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
 appleEntry.grid(row=2,column=1,pady=9,padx=10)
 appleEntry.insert(0,0)
 
+orangeLabel=Label(FruitsFrame,text='Orange',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+orangeLabel.grid(row=3,column=0,pady=9,padx=10)
+orangeEntry=Entry(FruitsFrame,font=('times new roman',15,'bold'),width=10,bd=5)
+orangeEntry.grid(row=3,column=1,pady=9,padx=10)
+orangeEntry.insert(0,0)
+
 
 
 
