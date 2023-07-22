@@ -13,6 +13,11 @@ headingLabel.pack(fill=X,pady=10)
 customer_details_frame=LabelFrame(root, text='Customer Details',font=('times new roman',15,'bold'),fg='pink3',bd=8,relief=GROOVE,bg='gray24')
 customer_details_frame.pack(fill=X)
 
+nameLabel=Label(customer_details_frame,text='Name',font=('times new roman',15,'bold'),bg='gray24',fg='white')
+nameLabel.grid(row=0,column=0,padx=20)
+nameEntry=Entry(customer_details_frame,font=('arial',15),bd=7,width=15)
+nameEntry.grid(row=0,column=1,padx=8)
+
 
 
 
