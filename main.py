@@ -129,6 +129,18 @@ def bill():
         textarea.insert(END, '\t\tThank You Come Again\n ')
         save_bill()
 
+def save_bill():
+    global billnumber
+
+    result=messagebox.askyesno('Confirm','Do you want to save the bill?')
+    if result:
+        bill_content=textarea.get(1.0,END)
+        file=open(f'bills/{billnumber}.txt','w')
+        file.write(bill_content)
+        file.close()
+        messagebox.showinfo('Success',f'billnumber{billnumber}is saved successfuly')
+        billnumber=random.randint(500,1000)
+
 
 #GUI part
 root = Tk()
