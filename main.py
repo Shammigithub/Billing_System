@@ -69,7 +69,7 @@ def bill():
         messagebox.showerror('Error', ' No Products are selected')
     else:
         textarea.delete(1.0,END)
-        textarea.insert(END,'\t\t**welcome**\n ')
+        textarea.insert(END,'\t**welcome**\n ')
         textarea.insert(END,f'\nBilll Number:{billnumber}\n')
         textarea.insert(END, f'\nCustomer Name:{nameEntry.get()}\n')
         textarea.insert(END, f'\nCustomer phone Number:{phoneEntry.get()}\n')
@@ -126,7 +126,8 @@ def bill():
 
         textarea.insert(END,f'\n\nTotal Bill\t\t\t\tRs.{totalbill}\n')
         textarea.insert(END, '\n--------------------------------------')
-        textarea.insert(END, '\t\t\tThank You Come Again\n ')
+        textarea.insert(END, '\n ')
+        textarea.insert(END, '\tThank You Come Again\n ')
         save_bill()
 
 def save_bill():
@@ -138,7 +139,7 @@ def save_bill():
         file=open(f'bills/{billnumber}.txt','w')
         file.write(bill_content)
         file.close()
-        messagebox.showinfo('Success',f'billnumber{billnumber}is saved successfuly')
+        messagebox.showinfo('Success',f'billnumber {billnumber}is saved successfuly')
         billnumber=random.randint(500,1000)
 
 def search():
