@@ -13,47 +13,47 @@ def total():
     global vcprice,ccprice,fcprice,lcprice,icprice,cfcprice
     global totalbill
 
-    pprice=int(papawEntry.get())*20
-    bprice=int(bananaEntry.get())* 3.00
-    aprice=int(appleEntry.get())*5
-    oprice=int(orangeEntry.get())*6
-    avprice=int(avacadoEntry.get())*90
-    gprice=int(grapesEntry.get())*78
+    pprice=int(papawEntry.get())*150
+    bprice=int(bananaEntry.get())*100
+    aprice=int(appleEntry.get())*50
+    oprice=int(orangeEntry.get())*60
+    avprice=int(avacadoEntry.get())*60
+    gprice=int(grapesEntry.get())*80
 
     totalfruitprice=pprice+bprice+aprice+oprice+avprice+gprice
     fruitEntry.delete(0,END)
     fruitEntry.insert(0,'Rs.'+str(totalfruitprice))
-    fruittax=totalfruitprice*0.12
+    fruittax=totalfruitprice * 0
     fruittaxEntry.delete(0, END)
     fruittaxEntry.insert(0,fruittax)
 
 
-    dprice = int(dodolEntry.get()) * 20
-    tprice = int(thalaEntry.get()) * 3.00
-    puprice = int(phuEntry.get()) * 5
-    mprice = int(masEntry.get()) * 6
-    muprice = int(musEntry.get()) * 90
-    sprice = int(swEntry.get()) * 78
+    dprice = int(dodolEntry.get()) * 200
+    tprice = int(thalaEntry.get()) * 160
+    puprice = int(phuEntry.get()) * 70
+    mprice = int(masEntry.get()) * 80
+    muprice = int(musEntry.get()) * 170
+    sprice = int(swEntry.get()) * 100
 
     totalsweetsprice = dprice + tprice + puprice + mprice + muprice + sprice
     sweetsEntry.delete(0, END)
     sweetsEntry.insert(0, 'Rs.' + str(totalsweetsprice))
-    sweetstax = totalsweetsprice * 0.12
+    sweetstax = totalsweetsprice * 0
     sweetstaxEntry.delete(0, END)
     sweetstaxEntry.insert(0, sweetstax)
 
 
-    vcprice = int(vcakeEntry.get()) * 20
-    ccprice = int(ccakeEntry.get()) * 3.00
-    fcprice = int(fcakeEntry.get()) * 5
-    lcprice = int(lcakeEntry.get()) * 6
-    icprice = int(icakeEntry.get()) * 90
-    cfcprice = int(cfcakeEntry.get()) * 78
+    vcprice = int(vcakeEntry.get()) * 250
+    ccprice = int(ccakeEntry.get()) * 350
+    fcprice = int(fcakeEntry.get()) * 300
+    lcprice = int(lcakeEntry.get()) * 600
+    icprice = int(icakeEntry.get()) * 1000
+    cfcprice = int(cfcakeEntry.get()) * 800
 
     totalcakeprice = vcprice + ccprice + fcprice +lcprice + icprice + cfcprice
     cakeEntry.delete(0, END)
     cakeEntry.insert(0, 'Rs.' + str(totalcakeprice))
-    caketax = totalcakeprice * 0.12
+    caketax = totalcakeprice * 0.10
     caketaxEntry.delete(0, END)
     caketaxEntry.insert(0, caketax)
 
@@ -69,7 +69,7 @@ def bill():
         messagebox.showerror('Error', ' No Products are selected')
     else:
         textarea.delete(1.0,END)
-        textarea.insert(END,'\t**welcome**\n ')
+        textarea.insert(END,'\t\t**_welcome_**\n ')
         textarea.insert(END,f'\nBilll Number:{billnumber}\n')
         textarea.insert(END, f'\nCustomer Name:{nameEntry.get()}\n')
         textarea.insert(END, f'\nCustomer phone Number:{phoneEntry.get()}\n')
@@ -118,11 +118,11 @@ def bill():
         textarea.insert(END, '\n--------------------------------------')
 
         if fruittaxEntry.get()!='Rs.0.0':
-            textarea.insert(END,f'\n Cosmetic Tax\t\t\t\tRs.{fruittaxEntry.get()}')
+            textarea.insert(END,f'\n Fruit Tax\t\t\t\tRs.{fruittaxEntry.get()}')
         if sweetstaxEntry.get()!='Rs.0.0':
-            textarea.insert(END,f'\n Book Tax\t\t\t\tRs.{sweetstaxEntry.get()}')
+            textarea.insert(END,f'\n Sweet Tax\t\t\t\tRs.{sweetstaxEntry.get()}')
         if caketaxEntry.get()!='Rs.0.0':
-            textarea.insert(END,f'\n Paper Tax\t\t\t\tRs.{caketaxEntry.get()}')
+            textarea.insert(END,f'\n Cake Tax\t\t\t\tRs.{caketaxEntry.get()}')
 
         textarea.insert(END,f'\n\nTotal Bill\t\t\t\tRs.{totalbill}\n')
         textarea.insert(END, '\n--------------------------------------')
@@ -286,7 +286,7 @@ def clear():
 #GUI part
 root = Tk()
 root.title("Billing System")
-root.geometry("1190x758")
+root.geometry("1200x758")
 root.iconbitmap("icon.ico")
 
 headingLabel = Label(root, text="Billing System",font=('times new roman',30, 'bold'), bg='pink3',fg='maroon4',bd=12,relief=GROOVE )
@@ -442,7 +442,7 @@ billareaLabel.pack(fill=X,)
 scrollbar=Scrollbar(billFrame,orient=VERTICAL)
 scrollbar.pack(side=RIGHT,fill=Y)
 
-textarea=Text(billFrame,height=18,width=38,yscrollcommand=scrollbar.set)
+textarea=Text(billFrame,height=18,width=40,yscrollcommand=scrollbar.set)
 textarea.pack()
 scrollbar.config(command=textarea.yview)
 
