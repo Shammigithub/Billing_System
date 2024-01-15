@@ -1,9 +1,11 @@
 # Billing_System
 
 Overview
+
 The Sweet Shop Desktop System is a user-friendly application designed for managing transactions and generating bills in a sweet shop setting. The system allows you to efficiently calculate the total amount of a customer's purchase, generate a detailed bill, and provides options for sending the bill via email or printing a physical copy.
 
 Features
+
 Transaction Management:
 Easily input and track customer purchases to calculate the total amount.
 Billing:
@@ -14,6 +16,7 @@ Printing:
 Option to print bills for traditional record-keeping.
 
 Dependencies
+
 tools library
 
 main window
