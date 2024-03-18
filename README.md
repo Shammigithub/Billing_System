@@ -1,21 +1,29 @@
-# Billing_System
+# Billing_System - Desktop Application
 
-Overview
+This desktop application is a billing system developed using Python's Tkinter library. It allows users to calculate items purchased by customers, view the bill, print the bill, and email the bill to the customer.
 
-The Sweet Shop Desktop System is a user-friendly application designed for managing transactions and generating bills in a sweet shop setting. The system allows you to efficiently calculate the total amount of a customer's purchase, generate a detailed bill, and provides options for sending the bill via email or printing a physical copy.
+## Features
+- Calculate items purchased by customers.
+- View the bill.
+- Print the bill.
+- Email the bill to the customer.
 
-Features
+## Technologies Used
+- Python
+- Tkinter
+- Random
+- OS
+- Tempfile
+- Smtplib
+- Messagebox
 
-Transaction Management:
-Easily input and track customer purchases to calculate the total amount.
-Billing:
-Generate detailed bills with a breakdown of items, quantities, and prices.
-Email Integration:
-Send bills directly to customers via email for a convenient and paperless experience.
-Printing:
-Option to print bills for traditional record-keeping.
+## Getting Started
+1. Clone this repository.
+2. Run the `billing_system.py` file using Python.
+3. Enter the items purchased by the customer and generate the bill.
+4. View, print, or email the bill as needed.
 
-
+## Screenshots
 
 main window
 
