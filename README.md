@@ -15,9 +15,7 @@ Send bills directly to customers via email for a convenient and paperless experi
 Printing:
 Option to print bills for traditional record-keeping.
 
-Dependencies
 
-tools library
 
 main window
 
